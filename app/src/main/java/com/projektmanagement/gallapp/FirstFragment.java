@@ -53,10 +53,8 @@ public class FirstFragment extends Fragment {
             @Override
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
-                if(s.length() != 0){
-                    double km = Double.parseDouble(s.toString());
-                    binding.ergebnis.setText(km * 0.01 + "kg CO2");
-                }
+                double km = tryParseDouble(s.toString());
+                binding.ergebnis.setText(km * 0.01 + "kg CO2");
             }
         });
     }
@@ -65,6 +63,14 @@ public class FirstFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    private double tryParseDouble(String s){
+        try{
+            return Double.parseDouble(s);
+        }catch (Exception e){
+            return 0;
+        }
     }
 
 }
