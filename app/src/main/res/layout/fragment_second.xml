@@ -6,25 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".SecondFragment">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="154dp"
+        android:layout_height="375dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="228dp"
+        android:scrollbars="vertical"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <Button
         android:id="@+id/button_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="96dp"
         android:text="@string/Show"
+        android:textColor="#5E35B1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="241dp"
+        android:layout_width="145dp"
         android:layout_height="378dp"
-        android:layout_marginStart="87dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="125dp"
         android:layout_marginBottom="228dp"
+        android:scrollbars="vertical"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/Unoptimized"
+        android:layout_width="148dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Optimized"
+        android:layout_width="163dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="24dp"
+        android:duplicateParentState="true"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
